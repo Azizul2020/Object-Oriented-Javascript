@@ -34,6 +34,11 @@ obj2.roll = 17;
 
 console.log(obj2);
 
+
+var obj3 = new String('Hello World');
+console.log(obj3);
+
+
 // Loop for Object;
 
 for (i in obj) {

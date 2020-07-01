@@ -1,18 +1,18 @@
-function myNew(constructor) {
+function myNew(consFun) {
     var obj = {};
-    Object.setPrototypeOf(obj, constructor.prototype);
+    Object.setPrototypeOf(obj, consFun.prototype);
     var argsArray = Array.prototype.slice.apply(arguments);
-    constructor.apply(obj, argsArray.slice(1));
+    consFun.apply(obj, argsArray.slice(1));
     return obj;
 }
 
-function Animal(name, age) {
+function Person(name, age) {
     this.name = name;
     this.age = age;
 };
 
 
-var cat2 = myNew(Animal, 'cat', 18);
+var cat2 = myNew(Person, 'Azizul Islam', 18);
 console.log(cat2);
 
 
